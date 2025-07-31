@@ -1,0 +1,22 @@
+
+<div class="container mb-5">
+                <div class="row">
+
+
+                    {% if book_result|length == 0 %} 
+                        <h1 class="text-center my-5">No Book Available</h1>
+                    {% else %}
+                        {% for r in book_result %}
+                        <div class="col-md-3 p-3">
+                            <div class="card product-card">
+
+                            <div>{{ r.bookname }}</div>
+                                
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+
+                </div>
+</div>
